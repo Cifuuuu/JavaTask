@@ -26,11 +26,11 @@ public class AdminView extends javax.swing.JFrame {
         initComponents();
     }
 
-    StudentManagementController controller;
-
-    public void setController(StudentManagementController controller) {
-        this.controller = controller;
-    }
+//    StudentManagementController controller;
+//
+//    public void setController(StudentManagementController controller) {
+//        this.controller = controller;
+//    }
 
    
 
@@ -42,39 +42,97 @@ public class AdminView extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         panelForMainMenu = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        buttonForCreateNewStudent = new javax.swing.JButton();
+        buttonForAddModule = new javax.swing.JButton();
+        buttonForDeleteStudent = new javax.swing.JButton();
+        buttonForShowLecturerDetails = new javax.swing.JButton();
+        buttonForBackToLogin = new javax.swing.JButton();
+        buttonForExit = new javax.swing.JButton();
         labelForSystemName = new javax.swing.JLabel();
         panelForCreateNewStudent = new javax.swing.JPanel();
+        splitPaneForCreateNewStudent = new javax.swing.JSplitPane();
+        panelForCreateNewStudentForm = new javax.swing.JPanel();
+        labelForNewName = new javax.swing.JLabel();
+        labelForNewAdmin = new javax.swing.JLabel();
+        labelForNewClass = new javax.swing.JLabel();
+        LabelForNewGPA = new javax.swing.JLabel();
+        textFieldForNewName = new javax.swing.JTextField();
+        textFieldForNewAdmin = new javax.swing.JTextField();
+        textFieldForNewClass = new javax.swing.JTextField();
+        textFieldForGPA = new javax.swing.JTextField();
+        buttonForNewStudentClear = new javax.swing.JButton();
+        buttonForNewStudentEnter = new javax.swing.JButton();
+        panelForFormatSuggestionAndError = new javax.swing.JPanel();
+        scrollPaneForFormatSuggestionAndError = new javax.swing.JScrollPane();
+        textAreaForFormatSuggestionAndError = new javax.swing.JTextArea();
         panelForAddModule = new javax.swing.JPanel();
+        splitPaneForAddModule = new javax.swing.JSplitPane();
+        splitPaneForFormatAndModuleSuggestions = new javax.swing.JSplitPane();
+        panelForFormatSuggestions = new javax.swing.JPanel();
+        textAreaForFormatSuggestions = new javax.swing.JTextArea();
+        panelForModuleSuggestions = new javax.swing.JPanel();
+        scrollPaneForModuleSuggestions = new javax.swing.JScrollPane();
+        textAreaForModuleSuggestions = new javax.swing.JTextArea();
+        panelForAddModuleForm = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        labelForClearAddModule = new javax.swing.JButton();
+        labelForEnterAddModule = new javax.swing.JButton();
+        labelForAddModuleCode = new javax.swing.JLabel();
+        labelForModuleName = new javax.swing.JLabel();
+        labelForModuleMarks = new javax.swing.JLabel();
+        labelForModuleCredits = new javax.swing.JLabel();
         panelForDeleteStudent = new javax.swing.JPanel();
-        jSplitPane1 = new javax.swing.JSplitPane();
+        splitPaneForDeleteStudent = new javax.swing.JSplitPane();
+        panelForDeleteStudentForm = new javax.swing.JPanel();
+        textFieldForDeleteStudent = new javax.swing.JTextField();
+        radioButtonForDeleteByName = new javax.swing.JRadioButton();
+        radioButtonForDeleteByAdminNo = new javax.swing.JRadioButton();
+        buttonForClearDeleteStudent = new javax.swing.JButton();
+        buttonForEnterDeleteStudent = new javax.swing.JButton();
+        panelForFormatAndDeleteStudentSuggestions = new javax.swing.JPanel();
+        splitPaneForFormatAndDeleteStudentSuggestions = new javax.swing.JSplitPane();
+        panelForDeleteStudentFormatSuggestions = new javax.swing.JPanel();
+        textFieldForDeleteStudentFormatSuggestions = new javax.swing.JTextArea();
+        panelForDeleteStudentSuggestions = new javax.swing.JPanel();
+        scrollPaneForDeleteStudentSuggestions = new javax.swing.JScrollPane();
+        textFieldForDeleteStudentSuggestions = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(495, 567));
         getContentPane().setLayout(new java.awt.CardLayout());
 
-        jButton1.setText("jButton1");
+        buttonForCreateNewStudent.setText("Create New Student");
 
-        jButton2.setText("jButton2");
-
-        jButton3.setText("jButton3");
-
-        jButton4.setText("jButton4");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        buttonForAddModule.setText("Add Module");
+        buttonForAddModule.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                buttonForAddModuleActionPerformed(evt);
             }
         });
 
-        jButton5.setText("jButton5");
+        buttonForDeleteStudent.setText("Delete Student");
+        buttonForDeleteStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonForDeleteStudentActionPerformed(evt);
+            }
+        });
 
-        jButton6.setText("jButton6");
+        buttonForShowLecturerDetails.setText("Show Lecturer Details");
+        buttonForShowLecturerDetails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonForShowLecturerDetailsActionPerformed(evt);
+            }
+        });
+
+        buttonForBackToLogin.setText("Back To Login");
+
+        buttonForExit.setText("Exit");
 
         labelForSystemName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelForSystemName.setText("labelForSystemName");
@@ -87,20 +145,20 @@ public class AdminView extends javax.swing.JFrame {
             .addGroup(panelForMainMenuLayout.createSequentialGroup()
                 .addGroup(panelForMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelForMainMenuLayout.createSequentialGroup()
-                        .addGap(165, 165, 165)
+                        .addContainerGap()
+                        .addComponent(labelForSystemName, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelForMainMenuLayout.createSequentialGroup()
+                        .addGap(59, 59, 59)
                         .addGroup(panelForMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(panelForMainMenuLayout.createSequentialGroup()
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
-                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(panelForMainMenuLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(labelForSystemName, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(162, Short.MAX_VALUE))
+                                .addComponent(buttonForBackToLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(buttonForExit, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(buttonForShowLecturerDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(buttonForDeleteStudent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(buttonForAddModule, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(buttonForCreateNewStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         panelForMainMenuLayout.setVerticalGroup(
             panelForMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,49 +166,461 @@ public class AdminView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(labelForSystemName, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(72, 72, 72)
-                .addComponent(jButton1)
+                .addComponent(buttonForCreateNewStudent)
                 .addGap(30, 30, 30)
-                .addComponent(jButton2)
+                .addComponent(buttonForAddModule)
                 .addGap(37, 37, 37)
-                .addComponent(jButton3)
+                .addComponent(buttonForDeleteStudent)
                 .addGap(33, 33, 33)
-                .addComponent(jButton4)
+                .addComponent(buttonForShowLecturerDetails)
                 .addGap(91, 91, 91)
                 .addGroup(panelForMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6))
+                    .addComponent(buttonForBackToLogin)
+                    .addComponent(buttonForExit))
                 .addContainerGap(145, Short.MAX_VALUE))
         );
 
         getContentPane().add(panelForMainMenu, "card2");
 
+        panelForCreateNewStudent.setPreferredSize(new java.awt.Dimension(495, 567));
+
+        splitPaneForCreateNewStudent.setDividerLocation(400);
+        splitPaneForCreateNewStudent.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
+
+        panelForCreateNewStudentForm.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelForCreateNewStudentForm.setLayout(new java.awt.GridBagLayout());
+
+        labelForNewName.setText("Name: ");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 18;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(71, 67, 0, 0);
+        panelForCreateNewStudentForm.add(labelForNewName, gridBagConstraints);
+
+        labelForNewAdmin.setText("Admin: ");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 15;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(26, 67, 0, 0);
+        panelForCreateNewStudentForm.add(labelForNewAdmin, gridBagConstraints);
+
+        labelForNewClass.setText("Class:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.ipadx = 27;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(23, 67, 0, 0);
+        panelForCreateNewStudentForm.add(labelForNewClass, gridBagConstraints);
+
+        LabelForNewGPA.setText("GPA");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.ipadx = 34;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(87, 67, 0, 0);
+        panelForCreateNewStudentForm.add(LabelForNewGPA, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 190;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(68, 26, 0, 80);
+        panelForCreateNewStudentForm.add(textFieldForNewName, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 190;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(23, 26, 0, 80);
+        panelForCreateNewStudentForm.add(textFieldForNewAdmin, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 190;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(20, 26, 0, 80);
+        panelForCreateNewStudentForm.add(textFieldForNewClass, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 190;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(84, 26, 0, 80);
+        panelForCreateNewStudentForm.add(textFieldForGPA, gridBagConstraints);
+
+        buttonForNewStudentClear.setText("Clear");
+        buttonForNewStudentClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonForNewStudentClearActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.ipadx = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(56, 17, 38, 0);
+        panelForCreateNewStudentForm.add(buttonForNewStudentClear, gridBagConstraints);
+
+        buttonForNewStudentEnter.setText("Enter");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.ipadx = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(56, 47, 38, 0);
+        panelForCreateNewStudentForm.add(buttonForNewStudentEnter, gridBagConstraints);
+
+        splitPaneForCreateNewStudent.setTopComponent(panelForCreateNewStudentForm);
+
+        panelForFormatSuggestionAndError.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        textAreaForFormatSuggestionAndError.setColumns(20);
+        textAreaForFormatSuggestionAndError.setRows(5);
+        scrollPaneForFormatSuggestionAndError.setViewportView(textAreaForFormatSuggestionAndError);
+
+        javax.swing.GroupLayout panelForFormatSuggestionAndErrorLayout = new javax.swing.GroupLayout(panelForFormatSuggestionAndError);
+        panelForFormatSuggestionAndError.setLayout(panelForFormatSuggestionAndErrorLayout);
+        panelForFormatSuggestionAndErrorLayout.setHorizontalGroup(
+            panelForFormatSuggestionAndErrorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForFormatSuggestionAndErrorLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(scrollPaneForFormatSuggestionAndError, javax.swing.GroupLayout.DEFAULT_SIZE, 471, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panelForFormatSuggestionAndErrorLayout.setVerticalGroup(
+            panelForFormatSuggestionAndErrorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForFormatSuggestionAndErrorLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(scrollPaneForFormatSuggestionAndError, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        splitPaneForCreateNewStudent.setRightComponent(panelForFormatSuggestionAndError);
+
         javax.swing.GroupLayout panelForCreateNewStudentLayout = new javax.swing.GroupLayout(panelForCreateNewStudent);
         panelForCreateNewStudent.setLayout(panelForCreateNewStudentLayout);
         panelForCreateNewStudentLayout.setHorizontalGroup(
             panelForCreateNewStudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 705, Short.MAX_VALUE)
+            .addGroup(panelForCreateNewStudentLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(splitPaneForCreateNewStudent)
+                .addContainerGap())
         );
         panelForCreateNewStudentLayout.setVerticalGroup(
             panelForCreateNewStudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 567, Short.MAX_VALUE)
+            .addGroup(panelForCreateNewStudentLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(splitPaneForCreateNewStudent, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         getContentPane().add(panelForCreateNewStudent, "card2");
+
+        panelForAddModule.setPreferredSize(new java.awt.Dimension(495, 567));
+
+        splitPaneForAddModule.setDividerLocation(130);
+        splitPaneForAddModule.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
+
+        splitPaneForFormatAndModuleSuggestions.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
+
+        panelForFormatSuggestions.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        textAreaForFormatSuggestions.setColumns(20);
+        textAreaForFormatSuggestions.setRows(5);
+
+        javax.swing.GroupLayout panelForFormatSuggestionsLayout = new javax.swing.GroupLayout(panelForFormatSuggestions);
+        panelForFormatSuggestions.setLayout(panelForFormatSuggestionsLayout);
+        panelForFormatSuggestionsLayout.setHorizontalGroup(
+            panelForFormatSuggestionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForFormatSuggestionsLayout.createSequentialGroup()
+                .addGap(0, 7, Short.MAX_VALUE)
+                .addComponent(textAreaForFormatSuggestions, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 7, Short.MAX_VALUE))
+        );
+        panelForFormatSuggestionsLayout.setVerticalGroup(
+            panelForFormatSuggestionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForFormatSuggestionsLayout.createSequentialGroup()
+                .addGap(0, 7, Short.MAX_VALUE)
+                .addComponent(textAreaForFormatSuggestions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 7, Short.MAX_VALUE))
+        );
+
+        splitPaneForFormatAndModuleSuggestions.setLeftComponent(panelForFormatSuggestions);
+
+        panelForModuleSuggestions.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        textAreaForModuleSuggestions.setColumns(20);
+        textAreaForModuleSuggestions.setRows(5);
+        scrollPaneForModuleSuggestions.setViewportView(textAreaForModuleSuggestions);
+
+        javax.swing.GroupLayout panelForModuleSuggestionsLayout = new javax.swing.GroupLayout(panelForModuleSuggestions);
+        panelForModuleSuggestions.setLayout(panelForModuleSuggestionsLayout);
+        panelForModuleSuggestionsLayout.setHorizontalGroup(
+            panelForModuleSuggestionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForModuleSuggestionsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(scrollPaneForModuleSuggestions, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panelForModuleSuggestionsLayout.setVerticalGroup(
+            panelForModuleSuggestionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForModuleSuggestionsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(scrollPaneForModuleSuggestions, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        splitPaneForFormatAndModuleSuggestions.setRightComponent(panelForModuleSuggestions);
+
+        splitPaneForAddModule.setRightComponent(splitPaneForFormatAndModuleSuggestions);
+
+        panelForAddModuleForm.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        labelForClearAddModule.setText("Clear");
+        labelForClearAddModule.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                labelForClearAddModuleActionPerformed(evt);
+            }
+        });
+
+        labelForEnterAddModule.setText("Enter");
+
+        labelForAddModuleCode.setText("Mod Name");
+
+        labelForModuleName.setText("Mod Code");
+
+        labelForModuleMarks.setText("Marks");
+
+        labelForModuleCredits.setText("Credit");
+
+        javax.swing.GroupLayout panelForAddModuleFormLayout = new javax.swing.GroupLayout(panelForAddModuleForm);
+        panelForAddModuleForm.setLayout(panelForAddModuleFormLayout);
+        panelForAddModuleFormLayout.setHorizontalGroup(
+            panelForAddModuleFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelForAddModuleFormLayout.createSequentialGroup()
+                .addContainerGap(34, Short.MAX_VALUE)
+                .addGroup(panelForAddModuleFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelForAddModuleCode))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelForAddModuleFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(panelForAddModuleFormLayout.createSequentialGroup()
+                        .addComponent(labelForClearAddModule, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelForEnterAddModule, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelForAddModuleFormLayout.createSequentialGroup()
+                        .addGroup(panelForAddModuleFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelForModuleName))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelForAddModuleFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelForModuleMarks, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelForAddModuleFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelForModuleCredits, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31))
+        );
+        panelForAddModuleFormLayout.setVerticalGroup(
+            panelForAddModuleFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForAddModuleFormLayout.createSequentialGroup()
+                .addContainerGap(34, Short.MAX_VALUE)
+                .addGroup(panelForAddModuleFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelForAddModuleCode)
+                    .addComponent(labelForModuleName)
+                    .addComponent(labelForModuleMarks)
+                    .addComponent(labelForModuleCredits))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelForAddModuleFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(panelForAddModuleFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelForClearAddModule)
+                    .addComponent(labelForEnterAddModule))
+                .addGap(9, 9, 9))
+        );
+
+        splitPaneForAddModule.setTopComponent(panelForAddModuleForm);
 
         javax.swing.GroupLayout panelForAddModuleLayout = new javax.swing.GroupLayout(panelForAddModule);
         panelForAddModule.setLayout(panelForAddModuleLayout);
         panelForAddModuleLayout.setHorizontalGroup(
             panelForAddModuleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 705, Short.MAX_VALUE)
+            .addGroup(panelForAddModuleLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(splitPaneForAddModule)
+                .addContainerGap())
         );
         panelForAddModuleLayout.setVerticalGroup(
             panelForAddModuleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 567, Short.MAX_VALUE)
+            .addGroup(panelForAddModuleLayout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addComponent(splitPaneForAddModule)
+                .addContainerGap())
         );
 
         getContentPane().add(panelForAddModule, "card2");
 
-        jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
+        panelForDeleteStudent.setPreferredSize(new java.awt.Dimension(495, 567));
+
+        splitPaneForDeleteStudent.setDividerLocation(150);
+        splitPaneForDeleteStudent.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
+
+        panelForDeleteStudentForm.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        radioButtonForDeleteByName.setText("By Name");
+        radioButtonForDeleteByName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioButtonForDeleteByNameActionPerformed(evt);
+            }
+        });
+
+        radioButtonForDeleteByAdminNo.setText("By Admin No");
+
+        buttonForClearDeleteStudent.setText("Clear");
+
+        buttonForEnterDeleteStudent.setText("Enter");
+        buttonForEnterDeleteStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonForEnterDeleteStudentActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelForDeleteStudentFormLayout = new javax.swing.GroupLayout(panelForDeleteStudentForm);
+        panelForDeleteStudentForm.setLayout(panelForDeleteStudentFormLayout);
+        panelForDeleteStudentFormLayout.setHorizontalGroup(
+            panelForDeleteStudentFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForDeleteStudentFormLayout.createSequentialGroup()
+                .addGroup(panelForDeleteStudentFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelForDeleteStudentFormLayout.createSequentialGroup()
+                        .addGap(109, 109, 109)
+                        .addGroup(panelForDeleteStudentFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(panelForDeleteStudentFormLayout.createSequentialGroup()
+                                .addComponent(radioButtonForDeleteByName, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(radioButtonForDeleteByAdminNo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(textFieldForDeleteStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelForDeleteStudentFormLayout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addComponent(buttonForClearDeleteStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(41, 41, 41)
+                        .addComponent(buttonForEnterDeleteStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(116, Short.MAX_VALUE))
+        );
+        panelForDeleteStudentFormLayout.setVerticalGroup(
+            panelForDeleteStudentFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForDeleteStudentFormLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(panelForDeleteStudentFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(radioButtonForDeleteByName)
+                    .addComponent(radioButtonForDeleteByAdminNo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textFieldForDeleteStudent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelForDeleteStudentFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buttonForEnterDeleteStudent)
+                    .addComponent(buttonForClearDeleteStudent))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+
+        splitPaneForDeleteStudent.setTopComponent(panelForDeleteStudentForm);
+
+        panelForFormatAndDeleteStudentSuggestions.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        splitPaneForFormatAndDeleteStudentSuggestions.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
+
+        panelForDeleteStudentFormatSuggestions.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        textFieldForDeleteStudentFormatSuggestions.setColumns(20);
+        textFieldForDeleteStudentFormatSuggestions.setRows(5);
+
+        javax.swing.GroupLayout panelForDeleteStudentFormatSuggestionsLayout = new javax.swing.GroupLayout(panelForDeleteStudentFormatSuggestions);
+        panelForDeleteStudentFormatSuggestions.setLayout(panelForDeleteStudentFormatSuggestionsLayout);
+        panelForDeleteStudentFormatSuggestionsLayout.setHorizontalGroup(
+            panelForDeleteStudentFormatSuggestionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForDeleteStudentFormatSuggestionsLayout.createSequentialGroup()
+                .addGap(0, 7, Short.MAX_VALUE)
+                .addComponent(textFieldForDeleteStudentFormatSuggestions, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 7, Short.MAX_VALUE))
+        );
+        panelForDeleteStudentFormatSuggestionsLayout.setVerticalGroup(
+            panelForDeleteStudentFormatSuggestionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForDeleteStudentFormatSuggestionsLayout.createSequentialGroup()
+                .addGap(0, 7, Short.MAX_VALUE)
+                .addComponent(textFieldForDeleteStudentFormatSuggestions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 7, Short.MAX_VALUE))
+        );
+
+        splitPaneForFormatAndDeleteStudentSuggestions.setTopComponent(panelForDeleteStudentFormatSuggestions);
+
+        panelForDeleteStudentSuggestions.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        textFieldForDeleteStudentSuggestions.setColumns(20);
+        textFieldForDeleteStudentSuggestions.setRows(5);
+        scrollPaneForDeleteStudentSuggestions.setViewportView(textFieldForDeleteStudentSuggestions);
+
+        javax.swing.GroupLayout panelForDeleteStudentSuggestionsLayout = new javax.swing.GroupLayout(panelForDeleteStudentSuggestions);
+        panelForDeleteStudentSuggestions.setLayout(panelForDeleteStudentSuggestionsLayout);
+        panelForDeleteStudentSuggestionsLayout.setHorizontalGroup(
+            panelForDeleteStudentSuggestionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForDeleteStudentSuggestionsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(scrollPaneForDeleteStudentSuggestions, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panelForDeleteStudentSuggestionsLayout.setVerticalGroup(
+            panelForDeleteStudentSuggestionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForDeleteStudentSuggestionsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(scrollPaneForDeleteStudentSuggestions, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        splitPaneForFormatAndDeleteStudentSuggestions.setRightComponent(panelForDeleteStudentSuggestions);
+
+        javax.swing.GroupLayout panelForFormatAndDeleteStudentSuggestionsLayout = new javax.swing.GroupLayout(panelForFormatAndDeleteStudentSuggestions);
+        panelForFormatAndDeleteStudentSuggestions.setLayout(panelForFormatAndDeleteStudentSuggestionsLayout);
+        panelForFormatAndDeleteStudentSuggestionsLayout.setHorizontalGroup(
+            panelForFormatAndDeleteStudentSuggestionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForFormatAndDeleteStudentSuggestionsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(splitPaneForFormatAndDeleteStudentSuggestions)
+                .addContainerGap())
+        );
+        panelForFormatAndDeleteStudentSuggestionsLayout.setVerticalGroup(
+            panelForFormatAndDeleteStudentSuggestionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelForFormatAndDeleteStudentSuggestionsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(splitPaneForFormatAndDeleteStudentSuggestions)
+                .addContainerGap())
+        );
+
+        splitPaneForDeleteStudent.setRightComponent(panelForFormatAndDeleteStudentSuggestions);
 
         javax.swing.GroupLayout panelForDeleteStudentLayout = new javax.swing.GroupLayout(panelForDeleteStudent);
         panelForDeleteStudent.setLayout(panelForDeleteStudentLayout);
@@ -158,14 +628,14 @@ public class AdminView extends javax.swing.JFrame {
             panelForDeleteStudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelForDeleteStudentLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 693, Short.MAX_VALUE)
+                .addComponent(splitPaneForDeleteStudent)
                 .addContainerGap())
         );
         panelForDeleteStudentLayout.setVerticalGroup(
             panelForDeleteStudentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelForDeleteStudentLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE)
+                .addComponent(splitPaneForDeleteStudent)
                 .addContainerGap())
         );
 
@@ -174,9 +644,37 @@ public class AdminView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void buttonForShowLecturerDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonForShowLecturerDetailsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_buttonForShowLecturerDetailsActionPerformed
+
+    private void buttonForAddModuleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonForAddModuleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonForAddModuleActionPerformed
+
+    private void buttonForDeleteStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonForDeleteStudentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonForDeleteStudentActionPerformed
+
+    private void buttonForNewStudentClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonForNewStudentClearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonForNewStudentClearActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void labelForClearAddModuleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_labelForClearAddModuleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_labelForClearAddModuleActionPerformed
+
+    private void radioButtonForDeleteByNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioButtonForDeleteByNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radioButtonForDeleteByNameActionPerformed
+
+    private void buttonForEnterDeleteStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonForEnterDeleteStudentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonForEnterDeleteStudentActionPerformed
 
     /**
      * @param args the command line arguments
@@ -215,17 +713,63 @@ public class AdminView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JLabel LabelForNewGPA;
+    private javax.swing.JButton buttonForAddModule;
+    private javax.swing.JButton buttonForBackToLogin;
+    private javax.swing.JButton buttonForClearDeleteStudent;
+    private javax.swing.JButton buttonForCreateNewStudent;
+    private javax.swing.JButton buttonForDeleteStudent;
+    private javax.swing.JButton buttonForEnterDeleteStudent;
+    private javax.swing.JButton buttonForExit;
+    private javax.swing.JButton buttonForNewStudentClear;
+    private javax.swing.JButton buttonForNewStudentEnter;
+    private javax.swing.JButton buttonForShowLecturerDetails;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JLabel labelForAddModuleCode;
+    private javax.swing.JButton labelForClearAddModule;
+    private javax.swing.JButton labelForEnterAddModule;
+    private javax.swing.JLabel labelForModuleCredits;
+    private javax.swing.JLabel labelForModuleMarks;
+    private javax.swing.JLabel labelForModuleName;
+    private javax.swing.JLabel labelForNewAdmin;
+    private javax.swing.JLabel labelForNewClass;
+    private javax.swing.JLabel labelForNewName;
     private javax.swing.JLabel labelForSystemName;
     private javax.swing.JPanel panelForAddModule;
+    private javax.swing.JPanel panelForAddModuleForm;
     private javax.swing.JPanel panelForCreateNewStudent;
+    private javax.swing.JPanel panelForCreateNewStudentForm;
     private javax.swing.JPanel panelForDeleteStudent;
+    private javax.swing.JPanel panelForDeleteStudentForm;
+    private javax.swing.JPanel panelForDeleteStudentFormatSuggestions;
+    private javax.swing.JPanel panelForDeleteStudentSuggestions;
+    private javax.swing.JPanel panelForFormatAndDeleteStudentSuggestions;
+    private javax.swing.JPanel panelForFormatSuggestionAndError;
+    private javax.swing.JPanel panelForFormatSuggestions;
     private javax.swing.JPanel panelForMainMenu;
+    private javax.swing.JPanel panelForModuleSuggestions;
+    private javax.swing.JRadioButton radioButtonForDeleteByAdminNo;
+    private javax.swing.JRadioButton radioButtonForDeleteByName;
+    private javax.swing.JScrollPane scrollPaneForDeleteStudentSuggestions;
+    private javax.swing.JScrollPane scrollPaneForFormatSuggestionAndError;
+    private javax.swing.JScrollPane scrollPaneForModuleSuggestions;
+    private javax.swing.JSplitPane splitPaneForAddModule;
+    private javax.swing.JSplitPane splitPaneForCreateNewStudent;
+    private javax.swing.JSplitPane splitPaneForDeleteStudent;
+    private javax.swing.JSplitPane splitPaneForFormatAndDeleteStudentSuggestions;
+    private javax.swing.JSplitPane splitPaneForFormatAndModuleSuggestions;
+    private javax.swing.JTextArea textAreaForFormatSuggestionAndError;
+    private javax.swing.JTextArea textAreaForFormatSuggestions;
+    private javax.swing.JTextArea textAreaForModuleSuggestions;
+    private javax.swing.JTextField textFieldForDeleteStudent;
+    private javax.swing.JTextArea textFieldForDeleteStudentFormatSuggestions;
+    private javax.swing.JTextArea textFieldForDeleteStudentSuggestions;
+    private javax.swing.JTextField textFieldForGPA;
+    private javax.swing.JTextField textFieldForNewAdmin;
+    private javax.swing.JTextField textFieldForNewClass;
+    private javax.swing.JTextField textFieldForNewName;
     // End of variables declaration//GEN-END:variables
 }
